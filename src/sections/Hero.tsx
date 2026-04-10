@@ -11,7 +11,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-32 overflow-hidden bg-white">
+    <section id="home" className="relative min-h-[700px] flex flex-col items-center justify-center pt-24 overflow-hidden bg-white">
       {/* Decorative Wavy Lines and Shapes from Figma */}
       <div className="absolute inset-0 pointer-events-none select-none">
         {/* Figma Red Wavy Curve on Left */}
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[60px] md:text-[94px] font-display font-light leading-[1] tracking-tight text-primary mb-12"
+          className="text-[44px] md:text-[94px] font-display font-light leading-[1] tracking-tight text-primary mb-8"
         >
           The <span className="relative inline-block">
             thinkers
@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="max-w-2xl mx-auto mb-20"
+          className="max-w-2xl mx-auto mb-10"
         >
           <p className="text-sm md:text-base text-secondary/70 leading-relaxed font-light">
              We are a team of strategists, designers, communicators, researchers. Together, we believe that progress only happens when you refuse to play things safe. 

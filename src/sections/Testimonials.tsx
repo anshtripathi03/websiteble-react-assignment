@@ -12,7 +12,7 @@ export default function Testimonials() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
-           className="text-[54px] md:text-[72px] font-display font-light leading-[1] mb-8"
+           className="text-[54px] md:text-[72px] font-display font-medium leading-[1] mb-8"
         >
           <span className="relative inline-block px-4">
              What

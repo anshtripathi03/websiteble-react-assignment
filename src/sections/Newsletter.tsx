@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Newsletter() {
   return (
-    <section className="pt-32 pb-16 relative overflow-hidden flex flex-col items-center justify-center">
+    <section className="pt-16 pb-8 relative overflow-hidden flex flex-col items-center justify-center">
       {/* Figma 3x Wavy Lines at top */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 flex gap-4 opacity-40">
         {[1, 2, 3].map((i) => (
@@ -24,7 +24,7 @@ export default function Newsletter() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
-           className="text-[64px] md:text-[88px] font-display font-light leading-[1.05] tracking-tight text-primary mb-8"
+           className="text-[64px] md:text-[88px] font-display font-medium leading-[0.95] tracking-tight text-primary mb-8"
         >
           Subscribe to <br />
           our newsletter

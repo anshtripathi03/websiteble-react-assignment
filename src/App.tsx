@@ -36,10 +36,12 @@ function App() {
   if (!mounted) return <SkeletonNavbar />;
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      
-      <main className="flex-grow">
+    <div className="min-h-screen bg-white selection:bg-accent-mint selection:text-primary overflow-x-hidden">
+      <Suspense fallback={<div className="h-20 bg-white" />}>
+        <Navbar />
+      </Suspense>
+
+      <main className="relative">
         <Suspense fallback={<SkeletonHero />}>
           <Hero />
         </Suspense>

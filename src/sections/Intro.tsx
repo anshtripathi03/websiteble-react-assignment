@@ -21,10 +21,10 @@ export default function Intro() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[54px] md:text-[72px] font-display font-light leading-[1.05] mb-12">
+          <h2 className="text-[32px] md:text-[72px] font-display font-light leading-[1] mb-8">
             <span className="relative inline-block px-1">
               Tomorrow
-              <span className="marker-pill marker-pill-yellow" />
+              <span className="marker-handdrawn" />
             </span> should <br />
             be better than <span className="relative inline-block px-1">
               today

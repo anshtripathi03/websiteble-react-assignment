@@ -20,7 +20,7 @@ export default function Services() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
-           className="mb-24"
+           className="mb-12"
         >
           <h2 className="text-[64px] md:text-[88px] font-display font-light leading-[1] mb-8">
              What we <span className="relative inline-block px-4">
@@ -38,7 +38,7 @@ export default function Services() {
           {FEATURES.map((feature, idx) => (
             <motion.div
               key={feature.id}
-              className="group grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-b border-border hover:bg-bg-soft transition-colors px-4 cursor-pointer relative"
+              className="group grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-border hover:bg-bg-soft transition-colors px-4 cursor-pointer relative"
             >
               {/* Left Column Description (Tiny uppercase text) */}
               <div className="md:col-span-3">
