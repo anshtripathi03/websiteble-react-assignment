@@ -50,3 +50,5 @@ export const TEAM_AVATARS = [
   'https://i.pravatar.cc/100?u=3',
   'https://i.pravatar.cc/100?u=4',
 ];
+
+export const LOADING_DELAY_MS = 2000;
