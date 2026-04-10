@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lexend:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-secondary: #666666;
+  --color-accent-yellow: #FFCB11;
+  --color-accent-pink: #FF9FAF;
+  --color-accent-mint: #BAF1D9;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-orange: #FF8D10;
+  --color-bg: #FFFFFF;
+  --color-border: #EEEEEE;
+  
+  --font-sans: 'Lexend', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  /* Precise Marker from Figma details */
+  .marker-handdrawn {
+    position: absolute;
+    bottom: -15px;
+    left: -5%;
+    width: 110%;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='300' height='20' viewBox='0 0 300 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q150 5 295 15' stroke='%23FFB342' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  .marker-pill {
+    position: absolute;
+    inset: -5% -20%;
+    background-color: var(--color-accent-mint);
+    border-radius: 9999px;
+    z-index: -1;
+  }
+
+  .marker-pill-pink { background-color: var(--color-accent-pink); }
+  .marker-pill-yellow { background-color: var(--color-accent-yellow); }
+
+  /* Shimmer animation */
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, #EBEBEB 25%, #F5F5F5 50%, #EBEBEB 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+}
+
+@layer utilities {
+  .max-w-base {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  /* Distributed placement for hero images */
+  .hero-img-spread {
+    position: absolute;
+    z-index: 10;
+    border-radius: 9999px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+}
